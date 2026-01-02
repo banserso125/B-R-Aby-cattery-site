@@ -7,32 +7,22 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "content"
+  - name: "site"
     label: "Website Content"
     files:
       - file: "content.json"
-        label: "Homepage Content"
+        label: "Homepage"
         name: "homepage"
         fields:
-          - label: "Hero Title"
-            name: "hero_title"
-            widget: "string"
-
-          - label: "Hero Subtitle"
-            name: "hero_subtitle"
-            widget: "string"
-
-          - label: "Hero Image"
-            name: "hero_image"
-            widget: "image"
-
-          - label: "Cats"
+          - label: "Kings & Queens"
             name: "cats"
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
 
-          - label: "Available Kittens Text"
-            name: "kitten_text"
-            widget: "text"
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            field:
+              { label: "Image", name: "image", widget: "image" }
