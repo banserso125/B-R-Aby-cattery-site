@@ -1,8 +1,4 @@
 {
-  "hero_title": "Nurtured with Heart & Soul.",
-  "hero_subtitle": "A home where love, ethics and beauty grow together.",
-  "hero_image": "https://ik.imagekit.io/i7ldkzk4a/hero%20image",
-
   "cats": [
     {
       "name": "Archie",
@@ -15,20 +11,11 @@
     {
       "name": "Betty",
       "image": "https://ik.imagekit.io/i7ldkzk4a/IMG_2105.jpg"
-    },
-    {
-      "name": "Suzy",
-      "image": "https://ik.imagekit.io/i7ldkzk4a/IMG_9839_edited.jpg"
-    },
-    {
-      "name": "Mia",
-      "image": "https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pc6ixlpc6ixlpc6i.png"
-    },
-    {
-      "name": "GeiGei",
-      "image": "https://ik.imagekit.io/i7ldkzk4a/18246319168038891.jpg"
     }
   ],
-
-  "kitten_text": "Our kittens are raised with love, socialisation, and ethical breeding practices. Each kitten receives full veterinary care and lifelong support."
+  "gallery": [
+    "https://images.unsplash.com/photo-1513245543132-31f507417b26",
+    "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba",
+    "https://images.unsplash.com/photo-1592194996308-7b43878e84a6"
+  ]
 }
