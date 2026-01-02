@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-Hant" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B & R Abyssinian Cattery | CFA 註冊阿比西尼亞貓舍 香港</title>
+    <title>B & R Abyssinian Cattery | CFA Registered Abyssinian Breeder Hong Kong</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -26,11 +26,11 @@
         .bg-cream { background-color: var(--color-warm-cream); }
         .bg-cocoa { background-color: var(--color-deep-cocoa); }
 
-        /* 滾動顯現動畫 */
+        /* Scroll Reveal Animation */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* 自動呼吸微動特效 (用於故事圖片) */
+        /* Soft Breathe Animation for Story Image */
         @keyframes breathe {
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-10px) scale(1.02); }
@@ -39,7 +39,7 @@
             animation: breathe 8s ease-in-out infinite;
         }
 
-        /* 卡片懸浮效果 */
+        /* Card Design */
         .warm-card { 
             transition: all 0.4s ease; 
             border-radius: 2rem;
@@ -65,7 +65,7 @@
 </head>
 <body class="antialiased selection:bg-orange-100 selection:text-orange-900">
 
-    <!-- 導航欄 -->
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-orange-100/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between h-24 items-center">
@@ -75,54 +75,81 @@
                         <span class="text-[10px] uppercase tracking-[0.4em] text-ruddy font-bold mt-1">Abyssinian Cattery</span>
                     </a>
                 </div>
+                
                 <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold tracking-[0.2em] uppercase text-stone-500">
-                    <a href="#home" class="hover:text-ruddy transition-colors text-stone-900">首頁</a>
-                    <a href="#story" class="hover:text-ruddy transition-colors">貓舍故事</a>
-                    <a href="#our-cats" class="hover:text-ruddy transition-colors">國王與皇后</a>
-                    <a href="#kittens" class="hover:text-ruddy transition-colors">幼貓預訂</a>
-                    <a href="#adoption-process" class="hover:text-ruddy transition-colors">領養流程</a>
-                    <a href="#contact" class="bg-ruddy text-white px-8 py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105 active:scale-95">預約諮詢</a>
+                    <a href="#home" class="hover:text-ruddy transition-colors text-stone-900">Home</a>
+                    <a href="#story" class="hover:text-ruddy transition-colors">Our Story</a>
+                    <a href="#our-cats" class="hover:text-ruddy transition-colors">Kings & Queens</a>
+                    <a href="#kittens" class="hover:text-ruddy transition-colors">Kittens</a>
+                    <a href="#adoption-process" class="hover:text-ruddy transition-colors">Process</a>
+                    <a href="#contact" class="bg-ruddy text-white px-8 py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105 active:scale-95 text-center">Inquire</a>
                 </div>
+
                 <button id="mobile-menu-button" class="lg:hidden text-stone-800 p-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" x2="20" y1="12" x2="20" y2="12"/><line x1="4" x2="20" y1="6" x2="20" y2="6"/><line x1="4" x2="20" y1="18" x2="20" y2="18"/></svg>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- 手機選單 -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] hidden bg-white flex flex-col items-center justify-center space-y-8 text-2xl font-serif">
         <button onclick="toggleMenu()" class="absolute top-8 right-8 text-stone-400"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-        <a href="#home" onclick="toggleMenu()">首頁</a>
-        <a href="#story" onclick="toggleMenu()">我們的故事</a>
-        <a href="#our-cats" onclick="toggleMenu()">國王與皇后</a>
+        <a href="#home" onclick="toggleMenu()">Home</a>
+        <a href="#story" onclick="toggleMenu()">Our Story</a>
+        <a href="#our-cats" onclick="toggleMenu()">Our Cats</a>
         <a href="#kittens" onclick="toggleMenu()">Available Kittens</a>
-        <a href="#contact" onclick="toggleMenu()" class="text-ruddy font-bold">聯繫我們</a>
+        <a href="#contact" onclick="toggleMenu()" class="text-ruddy font-bold">Contact</a>
     </div>
 
-    <!-- 首頁 Hero - 確保貓咪完整顯示 -->
+    <!-- Hero Section -->
     <section id="home" class="relative h-[70vh] lg:h-[85vh] flex items-center overflow-hidden bg-[var(--hero-bg)]">
         <div class="absolute inset-0 z-0">
             <img src="https://ik.imagekit.io/i7ldkzk4a/hero%20image" alt="B & R Abyssinian Hero" class="w-full h-full object-contain object-right opacity-100">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
+        
         <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-20">
             <div class="max-w-3xl reveal active">
                 <div class="flex items-center space-x-4 mb-8">
                     <span class="h-[1px] w-12 bg-white/50"></span>
-                    <p class="text-white font-bold tracking-[0.4em] text-[10px] uppercase shadow-sm">充滿愛與溫暖的家 • 香港</p>
+                    <p class="text-white font-bold tracking-[0.4em] text-[10px] uppercase shadow-sm">Nurturing with Love • Hong Kong</p>
                 </div>
-                <h1 class="text-6xl md:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tight drop-shadow-md">用心靈哺育 <br><span class="italic font-light text-stone-100">傳奇之美</span></h1>
-                <p class="text-lg md:text-xl text-white max-w-xl mb-12 font-medium leading-relaxed drop-shadow-sm">歡迎來到 B&R Aby。我們是位於香港的 CFA 註冊阿比西尼亞貓舍，致力於將這一古老品種視為珍愛的家人，在無籠環境中給予最好的照顧。</p>
+                <h1 class="text-6xl md:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tight drop-shadow-md">
+                    Nurtured with <br><span class="italic font-light text-stone-100">Heart & Soul.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white max-w-xl mb-12 font-medium leading-relaxed drop-shadow-sm">
+                    Welcome to B&R Aby. We are a Hong Kong Abyssinian cattery registered with CFA, dedicated to raising this ancient breed as cherished family members in a cage-free environment.
+                </p>
                 <div class="flex flex-col sm:flex-row gap-6">
-                    <a href="#kittens" class="px-10 py-5 bg-white text-ruddy rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-center">查看幼貓</a>
-                    <a href="#story" class="px-10 py-5 border border-white/40 text-white rounded-full font-semibold hover:bg-white/10 transition-all backdrop-blur-sm text-center">貓舍故事</a>
+                    <a href="#kittens" class="px-10 py-5 bg-white text-ruddy rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-center">Available Kittens</a>
+                    <a href="#story" class="px-10 py-5 border border-white/40 text-white rounded-full font-semibold hover:bg-white/10 transition-all backdrop-blur-sm text-center">Our Story</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 我們的故事 -->
+    <!-- Excellence Bar -->
+    <section class="py-16 bg-white/50 border-b border-orange-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex flex-wrap justify-center gap-16 md:gap-32 text-stone-400">
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-serif font-bold text-stone-700">CFA</span>
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Registered Cattery</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <span class="text-3xl font-serif font-bold text-stone-700">Socialized</span>
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Raised with Corgis</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-3xl font-serif font-bold text-stone-700">Ethical</span>
+                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Professional Breeding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Heritage / Story -->
     <section id="story" class="py-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-12 gap-20 items-center">
@@ -137,129 +164,156 @@
                     </div>
                 </div>
                 <div class="lg:col-span-7 reveal">
-                    <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-6">貓舍歷史</p>
-                    <h2 class="text-4xl md:text-6xl font-serif mb-10 text-stone-800 leading-tight">一段關於愛與 <span class="italic text-ruddy">承諾的旅程</span></h2>
+                    <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-6">Our Heritage</p>
+                    <h2 class="text-4xl md:text-6xl font-serif mb-10 text-stone-800 leading-tight">A Journey of <span class="italic text-ruddy">Dedication.</span></h2>
                     <div class="space-y-8 text-stone-600 font-light text-lg text-justify leading-relaxed">
-                        <p>我們是香港的阿比西尼亞貓舍，在愛貓者協會 (CFA) 註冊。我們對這個神祕品種的喜愛是「一見鍾情」。一切都始於我們絕育的寵物阿比西尼亞女孩——<strong>Dristi</strong>。</p>
-                        <p>我們無法停止探索這個品種的不同表現和頂級血統。隨著我們向世界各地的專業貓舍學習，這種吸引力變得愈發不可抗拒。從那時起，這已成為對這個古老神祕品種的一段奉獻旅程。</p>
+                        <p>We are a Hong Kong Abyssinian cattery registered under the Cat Fanciers' Association (CFA). Our fascination with this mystical breed was love at first sight. It all started with our neutered pet Abyssinian girl—<strong>Dristi</strong>.</p>
+                        <p>We simply could not stop exploring the different representations and top bloodlines of the breed. The more we studied and learned from professional catteries around the world, the more irresistible it became.</p>
+                        <p>Since then, it has become a lifelong journey of dedication to this ancient and mystical breed.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 國王與皇后 -->
+    <!-- Our Kings & Queens -->
     <section id="our-cats" class="py-32 bg-cream/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
             <div class="mb-20 reveal">
-                <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-4">家族成員</p>
+                <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-4">The Family Members</p>
                 <h2 class="text-5xl font-serif text-stone-800 mb-6">Our Kings & Queens</h2>
             </div>
+            
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-10">
-                <!-- Archie -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pb7tncpb7tncpb7t.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Archie">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Archie</div>
-                </div>
-                <!-- Theo -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/313337570_520024506321078_4612126473075696293_n.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Theo">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Theo</div>
-                </div>
-                <!-- Betty -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/IMG_2105.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Betty">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Betty</div>
-                </div>
-                <!-- Suzy -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/IMG_9839_edited.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Suzy">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Suzy</div>
-                </div>
-                <!-- Mia -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pc6ixlpc6ixlpc6i.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mia">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Mia</div>
-                </div>
-                <!-- Chibi -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_d99q53d99q53d99q.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Chibi">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Chibi</div>
-                </div>
-                <!-- Tiff -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/45888aab-26d4-4595-ade2-22f7017e3f4e.JPG" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Tiff">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">Tiff</div>
-                </div>
-                <!-- GeiGei -->
-                <div class="warm-card group p-3 reveal">
-                    <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
-                        <img src="https://ik.imagekit.io/i7ldkzk4a/18246319168038891.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="GeiGei">
-                    </div>
-                    <div class="text-center font-serif text-xl text-stone-800">GeiGei</div>
-                </div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pb7tncpb7tncpb7t.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Archie"></div><div class="text-center font-serif text-xl text-stone-800">Archie</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/313337570_520024506321078_4612126473075696293_n.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Theo"></div><div class="text-center font-serif text-xl text-stone-800">Theo</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/IMG_2105.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Betty"></div><div class="text-center font-serif text-xl text-stone-800">Betty</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/IMG_9839_edited.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Suzy"></div><div class="text-center font-serif text-xl text-stone-800">Suzy</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pc6ixlpc6ixlpc6i.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mia"></div><div class="text-center font-serif text-xl text-stone-800">Mia</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_d99q53d99q53d99q.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Chibi"></div><div class="text-center font-serif text-xl text-stone-800">Chibi</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/45888aab-26d4-4595-ade2-22f7017e3f4e.JPG" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Tiff"></div><div class="text-center font-serif text-xl text-stone-800">Tiff</div></div>
+                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/18246319168038891.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="GeiGei"></div><div class="text-center font-serif text-xl text-stone-800">GeiGei</div></div>
             </div>
         </div>
     </section>
 
-    <!-- 幼貓預訂 -->
+    <!-- Available Kittens Section -->
     <section id="kittens" class="py-32 bg-cocoa text-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-2 gap-20 items-center">
                 <div class="reveal">
-                    <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-6">期待新生命的到來</p>
+                    <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-6">Join the Waitlist</p>
                     <h2 class="text-5xl font-serif mb-8">Available Kittens</h2>
-                    <p class="text-white/60 font-light text-lg mb-10 text-justify leading-relaxed">我們傾注全部心血哺育每一隻幼貓。尋找最合適的家是我們的使命。我們嚴格遵守不除爪、不關籠、不戶外飼養的原則。</p>
-                    <div class="p-8 bg-white/5 rounded-3xl border border-white/10">
-                        <h5 class="text-ruddy font-bold uppercase tracking-widest text-xs mb-6">B&R 幼貓禮包：</h5>
+                    <p class="text-white/60 font-light text-lg mb-10 text-justify leading-relaxed">
+                        We pour our hearts into raising every kitten. Finding them the best possible home is our mission. We strictly reject declawing, caging, or outdoor living. We match based on temperament and your lifestyle.
+                    </p>
+                    <div class="p-8 bg-white/5 rounded-3xl border border-white/10 text-left">
+                        <h5 class="text-ruddy font-bold uppercase tracking-widest text-xs mb-6">B&R Package Includes:</h5>
                         <ul class="space-y-4 text-xs font-semibold uppercase tracking-wider text-white/80">
-                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>CFA 官方註冊文件</span></li>
-                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>完整的疫苗與健康記錄</span></li>
+                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>CFA Official Registration Papers</span></li>
+                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Full Vaccination & Health Records</span></li>
+                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Neutering Certificate by Licensed Vet</span></li>
+                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Lifetime Breeder Support</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="reveal">
                     <div class="bg-cream rounded-[3rem] p-10 lg:p-12 text-stone-900 shadow-2xl relative">
-                        <h3 class="text-3xl font-serif mb-8 text-center text-stone-800">聯繫我們</h3>
+                        <h3 class="text-3xl font-serif mb-8 text-center text-stone-800">Inquire</h3>
                         <form id="inquiryForm" class="space-y-6">
-                            <input type="text" placeholder="您的姓名" class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none">
-                            <input type="text" placeholder="WhatsApp 或 電郵" class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none">
-                            <textarea rows="4" placeholder="請告訴我們一些關於您的生活環境..." class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none"></textarea>
-                            <button type="submit" class="w-full bg-ruddy text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-stone-800 transition-all">送出申請</button>
+                            <input type="text" placeholder="Full Name" class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none">
+                            <input type="text" placeholder="WhatsApp or Email" class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none">
+                            <textarea rows="4" placeholder="Tell us about yourself and your interest in an Abyssinian..." class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none"></textarea>
+                            <button type="submit" class="w-full bg-ruddy text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-stone-800 transition-all shadow-lg">Submit Application</button>
                         </form>
-                        <div id="formSuccess" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-xl text-center text-xs font-bold uppercase tracking-widest">訊息已成功送出！</div>
+                        <div id="formSuccess" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-xl text-center text-xs font-bold uppercase tracking-widest">Message sent with love.</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 頁尾 -->
+    <!-- Adoption Journey (Finding the Perfect Match) -->
+    <section id="adoption-process" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center mb-20 reveal">
+                <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Adoption Journey</p>
+                <h2 class="text-5xl font-serif text-stone-800 mb-6">Finding the Perfect Match</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 text-center">
+                <div class="relative p-10 reveal">
+                    <span class="step-number text-ruddy">01</span>
+                    <h4 class="font-serif text-2xl mb-4">Consultation</h4>
+                    <p class="text-sm text-stone-500 font-light">Tell us about your lifestyle. We want to find the best future for our babies.</p>
+                </div>
+                <div class="relative p-10 reveal" style="transition-delay: 100ms;">
+                    <span class="step-number text-ruddy">02</span>
+                    <h4 class="font-serif text-2xl mb-4">Matching</h4>
+                    <p class="text-sm text-stone-500 font-light">We match you with a kitten whose temperament aligns with your home environment.</p>
+                </div>
+                <div class="relative p-10 reveal" style="transition-delay: 200ms;">
+                    <span class="step-number text-ruddy">03</span>
+                    <h4 class="font-serif text-2xl mb-4">Homecoming</h4>
+                    <p class="text-sm text-stone-500 font-light">Kittens join families fully prepared for a lifetime of health and loving memories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Life at B&R (Gallery) -->
+    <section id="gallery" class="py-32 bg-stone-50 overflow-hidden text-center">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="mb-20 reveal">
+                <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Life at B&R</p>
+                <h2 class="text-5xl font-serif text-stone-800 mb-6 text-center">Warm Memories</h2>
+            </div>
+            <div id="smart-gallery" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Refined Footer -->
     <footer class="py-24 bg-white border-t border-orange-100 text-center">
         <p class="text-3xl font-serif font-bold text-stone-800 leading-none">B & R</p>
         <p class="text-[10px] uppercase tracking-[0.4em] text-ruddy font-bold mt-2">Abyssinian Cattery</p>
-        <p class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold mt-8">&copy; 2025 B & R Abyssinian Cattery. 香港 CFA 註冊成員貓舍。</p>
+        <div class="mt-8 space-x-6">
+            <a href="#" class="text-stone-400 hover:text-ruddy transition-colors uppercase text-[10px] font-bold tracking-widest">Instagram</a>
+            <a href="#" class="text-stone-400 hover:text-ruddy transition-colors uppercase text-[10px] font-bold tracking-widest">WhatsApp</a>
+        </div>
+        <p class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold mt-8">&copy; 2025 B & R Abyssinian Cattery. Hong Kong. CFA Registered.</p>
     </footer>
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
         }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // GALLERY IMAGES DATA
+        const GALLERY_IMAGES = [
+            "https://cfa.org/wp-content/uploads/2025/09/2025-g-BRAbyPanettone.webp",
+            "https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1511275539165-cc46b1ee8960?auto=format&fit=crop&q=80&w=600",
+            "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&q=80&w=600"
+        ];
+
+        const container = document.getElementById('smart-gallery');
+        GALLERY_IMAGES.forEach(url => {
+            const div = document.createElement('div');
+            div.className = "warm-card group relative aspect-square overflow-hidden rounded-[2rem] reveal";
+            div.innerHTML = `<img src="${url}" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" loading="lazy">`;
+            container.appendChild(div);
+        });
 
         const mobileMenu = document.getElementById('mobile-menu');
         function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
