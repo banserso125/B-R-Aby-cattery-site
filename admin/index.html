@@ -1,10 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </head>
-  <body>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B & R Aby 內容管理後台</title>
+</head>
+<body>
+  <script>
+    /**
+     * 手動構造配置文件的絕對路徑，以解決不同部署環境下的 URL 解析錯誤。
+     */
+    try {
+      const configFileName = 'config.yml';
+      window.CMS_CONFIG_URL = new URL(configFileName, window.location.href).href;
+    } catch (e) {
+      console.error("無法正確解析配置文件路徑:", e);
+    }
+  </script>
+
+  <!-- 載入 Decap CMS 主程式 -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
 </html>
