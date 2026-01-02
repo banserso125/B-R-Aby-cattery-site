@@ -1,7 +1,7 @@
 # Decap CMS 專業配置檔案
 backend:
   name: github
-  repo: your-username/br-aby-website # 務必將 your-username 改為您的 GitHub 用戶名
+  repo: your-username/br-aby-website # 請務必將 your-username 改為您的 GitHub 使用者名稱
   branch: main
 
 media_folder: "assets/uploads"
@@ -15,22 +15,18 @@ collections:
         label: "首頁資訊"
         name: "index"
         fields:
-          - {label: "主標題", name: "hero_title", widget: "string", default: "Nurtured with Heart & Soul."}
+          - {label: "主標題", name: "hero_title", widget: "string"}
           - {label: "首頁主圖", name: "hero_image", widget: "image"}
           
           - label: "國王與皇后名單"
             name: "cats"
             widget: "list"
             fields:
-              - {label: "名字", name: "name", widget: "string"}
-              - {label: "照片", name: "image", widget: "image"}
-
-          - label: "幼貓預訂文字"
-            name: "kitten_text"
-            widget: "markdown"
+              - {label: "貓咪名字", name: "name", widget: "string"}
+              - {label: "貓咪照片", name: "image", widget: "image"}
 
           - label: "IG 藝廊圖片"
             name: "gallery"
             widget: "list"
             fields:
-              - {label: "圖片連結", name: "url", widget: "image"}
+              - {label: "圖片路徑", name: "url", widget: "image"}
