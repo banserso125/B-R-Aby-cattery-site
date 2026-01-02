@@ -1,12 +1,3 @@
----
-hero_title: a
-hero_image: /assets/uploads/312997876_483186677166472_964505594951668973_n.jpg
-kitten_text: b
-adoption:
-  heading: adoption section
-gallery:
-  - url: /assets/uploads/313128213_135140879070098_7843333073183849136_n.jpg
----
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -35,11 +26,9 @@ gallery:
         .bg-cream { background-color: var(--color-warm-cream); }
         .bg-cocoa { background-color: var(--color-deep-cocoa); }
 
-        /* Scroll Reveal Animation */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Soft Breathe Animation for Story Image */
         @keyframes breathe {
             0%, 100% { transform: translateY(0) scale(1); }
             50% { transform: translateY(-10px) scale(1.02); }
@@ -48,7 +37,6 @@ gallery:
             animation: breathe 8s ease-in-out infinite;
         }
 
-        /* Card Hover Depth */
         .warm-card { 
             transition: all 0.4s ease; 
             border-radius: 2rem;
@@ -74,7 +62,6 @@ gallery:
 </head>
 <body class="antialiased selection:bg-orange-100 selection:text-orange-900">
 
-    <!-- Premium Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-orange-100/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between h-24 items-center">
@@ -84,7 +71,6 @@ gallery:
                         <span class="text-[10px] uppercase tracking-[0.4em] text-ruddy font-bold mt-1">Abyssinian Cattery</span>
                     </a>
                 </div>
-                
                 <div class="hidden lg:flex items-center space-x-10 text-[11px] font-bold tracking-[0.2em] uppercase text-stone-500">
                     <a href="#home" class="hover:text-ruddy transition-colors text-stone-900">Home</a>
                     <a href="#story" class="hover:text-ruddy transition-colors">Our Story</a>
@@ -93,15 +79,14 @@ gallery:
                     <a href="#adoption-process" class="hover:text-ruddy transition-colors">Process</a>
                     <a href="#contact" class="bg-ruddy text-white px-8 py-3 rounded-full hover:shadow-lg transition-all transform hover:scale-105 active:scale-95 text-center">Inquire</a>
                 </div>
-
                 <button id="mobile-menu-button" class="lg:hidden text-stone-800 p-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" x2="20" y1="6" x2="20" y2="6"/><line x1="4" x2="20" y1="18" x2="20" y2="18"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" x2="20" y2="6"/><line x1="4" x2="20" y1="18" x2="20" y2="18"/></svg>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] hidden bg-white flex flex-col items-center justify-center space-y-8 text-2xl font-serif">
         <button onclick="toggleMenu()" class="absolute top-8 right-8 text-stone-400"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
         <a href="#home" onclick="toggleMenu()">Home</a>
@@ -111,24 +96,23 @@ gallery:
         <a href="#contact" onclick="toggleMenu()" class="text-ruddy font-bold">Contact</a>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Static) -->
     <section id="home" class="relative h-[70vh] lg:h-[85vh] flex items-center overflow-hidden bg-[var(--hero-bg)]">
         <div class="absolute inset-0 z-0">
             <img src="https://ik.imagekit.io/i7ldkzk4a/hero%20image" alt="B & R Abyssinian Hero" class="w-full h-full object-contain object-right opacity-100">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
-        
         <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full pt-20">
             <div class="max-w-3xl reveal active">
                 <div class="flex items-center space-x-4 mb-8">
                     <span class="h-[1px] w-12 bg-white/50"></span>
-                    <p class="text-white font-bold tracking-[0.4em] text-[10px] uppercase shadow-sm">A Home Filled with Love • Hong Kong</p>
+                    <p class="text-white font-bold tracking-[0.4em] text-[10px] uppercase shadow-sm">Nurturing with Love • Hong Kong</p>
                 </div>
                 <h1 class="text-6xl md:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tight drop-shadow-md">
                     Nurtured with <br><span class="italic font-light text-stone-100">Heart & Soul.</span>
                 </h1>
                 <p class="text-lg md:text-xl text-white max-w-xl mb-12 font-medium leading-relaxed drop-shadow-sm">
-                    Welcome to B&R Aby. We are a Hong Kong Abyssinian cattery registered with CFA, dedicated to raising this ancient breed as cherished family members in a cage-free environment.
+                    Welcome to B&R Aby. We are a Hong Kong Abyssinian cattery registered with CFA, dedicated to raising this ancient breed as cherished family members.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-6">
                     <a href="#kittens" class="px-10 py-5 bg-white text-ruddy rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 text-center">Available Kittens</a>
@@ -138,27 +122,7 @@ gallery:
         </div>
     </section>
 
-    <!-- Excellence Bar -->
-    <section class="py-16 bg-white/50 border-b border-orange-100">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="flex flex-wrap justify-center gap-16 md:gap-32 text-stone-400">
-                <div class="flex flex-col items-center">
-                    <span class="text-3xl font-serif font-bold text-stone-700">CFA</span>
-                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Registered Cattery</span>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <span class="text-3xl font-serif font-bold text-stone-700">Socialized</span>
-                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Raised with Corgis</span>
-                </div>
-                <div class="flex flex-col items-center">
-                    <span class="text-3xl font-serif font-bold text-stone-700">Ethical</span>
-                    <span class="text-[9px] uppercase tracking-[0.3em] font-bold">Professional Breeding</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Heritage / Story -->
+    <!-- Our Story (Static) -->
     <section id="story" class="py-32 bg-white relative">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="grid lg:grid-cols-12 gap-20 items-center">
@@ -176,71 +140,29 @@ gallery:
                     <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-6">Our Heritage</p>
                     <h2 class="text-4xl md:text-6xl font-serif mb-10 text-stone-800 leading-tight">A Journey of <span class="italic text-ruddy">Dedication.</span></h2>
                     <div class="space-y-8 text-stone-600 font-light text-lg text-justify leading-relaxed">
-                        <p>We are a Hong Kong Abyssinian cattery registered under the Cat Fanciers' Association (CFA). Our fascination with this mystical breed was love at first sight. It all started with our neutered pet Abyssinian girl—<strong>Dristi</strong>.</p>
-                        <p>The more we studied and learned from professional catteries around the world, the more irresistible it became. Since then, it has become a lifelong journey of dedication to this ancient and mystical breed.</p>
+                        <p>We are a Hong Kong Abyssinian cattery registered under the Cat Fanciers' Association (CFA). It all started with our neutered pet Abyssinian girl—<strong>Dristi</strong>.</p>
+                        <p>The more we learned from professional catteries around the world, the more irresistible it became. Since then, it has become a lifelong journey of dedication to this ancient breed.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Kings & Queens Grid -->
+    <!-- Kings & Queens (Dynamic) -->
     <section id="our-cats" class="py-32 bg-cream/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
             <div class="mb-20 reveal">
                 <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-4">The Family Members</p>
                 <h2 class="text-5xl font-serif text-stone-800 mb-6">Our Kings & Queens</h2>
             </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-10">
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pb7tncpb7tncpb7t.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Archie"></div><div class="text-center font-serif text-xl text-stone-800">Archie</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/313337570_520024506321078_4612126473075696293_n.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Theo"></div><div class="text-center font-serif text-xl text-stone-800">Theo</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/IMG_2105.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Betty"></div><div class="text-center font-serif text-xl text-stone-800">Betty</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/IMG_9839_edited.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Suzy"></div><div class="text-center font-serif text-xl text-stone-800">Suzy</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pc6ixlpc6ixlpc6i.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mia"></div><div class="text-center font-serif text-xl text-stone-800">Mia</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_d99q53d99q53d99q.png" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Chibi"></div><div class="text-center font-serif text-xl text-stone-800">Chibi</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/45888aab-26d4-4595-ade2-22f7017e3f4e.JPG" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Tiff"></div><div class="text-center font-serif text-xl text-stone-800">Tiff</div></div>
-                <div class="warm-card group p-3 reveal"><div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4"><img src="https://ik.imagekit.io/i7ldkzk4a/18246319168038891.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="GeiGei"></div><div class="text-center font-serif text-xl text-stone-800">GeiGei</div></div>
+            <!-- 這個區域將由 JavaScript 動態填入 -->
+            <div id="cats-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-10">
+                <p class="col-span-full text-stone-400">Loading our royalty...</p>
             </div>
         </div>
     </section>
 
-    <!-- Available Kittens Section -->
-    <section id="kittens" class="py-32 bg-cocoa text-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div class="reveal">
-                    <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-6">Join the Waitlist</p>
-                    <h2 class="text-5xl font-serif mb-8">Available Kittens</h2>
-                    <p class="text-white/60 font-light text-lg mb-10 text-justify leading-relaxed">
-                        We pour our hearts into raising every kitten. Finding them the best possible home is our mission. We strictly reject declawing, caging, or outdoor living. We match based on temperament and your lifestyle.
-                    </p>
-                    <div class="p-8 bg-white/5 rounded-3xl border border-white/10 text-left">
-                        <h5 class="text-ruddy font-bold uppercase tracking-widest text-xs mb-6">B&R Package Includes:</h5>
-                        <ul class="space-y-4 text-xs font-semibold uppercase tracking-wider text-white/80">
-                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>CFA Official Registration Papers</span></li>
-                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Full Vaccination & Health Records</span></li>
-                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Neutering Certificate by Licensed Vet</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="reveal">
-                    <div class="bg-cream rounded-[3rem] p-10 lg:p-12 text-stone-900 shadow-2xl relative">
-                        <h3 class="text-3xl font-serif mb-8 text-center text-stone-800">Inquire</h3>
-                        <form id="inquiryForm" class="space-y-6">
-                            <input type="text" placeholder="Full Name" class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none">
-                            <input type="text" placeholder="WhatsApp or Email" class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none">
-                            <textarea rows="4" placeholder="Tell us about yourself and your interest in an Abyssinian..." class="w-full px-6 py-4 bg-stone-100 rounded-2xl focus:outline-none"></textarea>
-                            <button type="submit" class="w-full bg-ruddy text-white py-5 rounded-2xl font-bold uppercase tracking-[0.2em] hover:bg-stone-800 transition-all shadow-lg">Submit Application</button>
-                        </form>
-                        <div id="formSuccess" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-xl text-center text-xs font-bold uppercase tracking-widest">Message sent with love.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Adoption Journey Section -->
+    <!-- Adoption Journey (Static) -->
     <section id="adoption-process" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="text-center mb-20 reveal">
@@ -251,7 +173,7 @@ gallery:
                 <div class="relative p-10 reveal">
                     <span class="step-number text-ruddy">01</span>
                     <h4 class="font-serif text-2xl mb-4">Consultation</h4>
-                    <p class="text-sm text-stone-500 font-light">Tell us about your lifestyle. We want to find the best future for our babies.</p>
+                    <p class="text-sm text-stone-500 font-light">Introduce yourself and your lifestyle. We want to find the best future for our babies.</p>
                 </div>
                 <div class="relative p-10 reveal" style="transition-delay: 100ms;">
                     <span class="step-number text-ruddy">02</span>
@@ -267,66 +189,86 @@ gallery:
         </div>
     </section>
 
-    <!-- Life at B&R (Gallery) -->
+    <!-- Warm Memories (Dynamic) -->
     <section id="gallery" class="py-32 bg-stone-50 overflow-hidden text-center">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="mb-20 reveal">
                 <p class="text-ruddy font-bold tracking-[0.3em] uppercase text-[10px] mb-4">Life at B&R</p>
                 <h2 class="text-5xl font-serif text-stone-800 mb-6 text-center">Warm Memories</h2>
             </div>
+            <!-- 這個區域將由 JavaScript 動態填入 -->
             <div id="smart-gallery" class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Injected via JavaScript -->
+                <!-- Injected via JS -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-24 bg-white border-t border-orange-100 text-center">
         <p class="text-3xl font-serif font-bold text-stone-800 leading-none">B & R</p>
         <p class="text-[10px] uppercase tracking-[0.4em] text-ruddy font-bold mt-2">Abyssinian Cattery</p>
-        <div class="mt-8 space-x-6">
-            <a href="#" class="text-stone-400 hover:text-ruddy transition-colors uppercase text-[10px] font-bold tracking-widest">Instagram</a>
-            <a href="#" class="text-stone-400 hover:text-ruddy transition-colors uppercase text-[10px] font-bold tracking-widest">WhatsApp</a>
-        </div>
         <p class="text-[9px] text-stone-300 uppercase tracking-[0.3em] font-bold mt-8">&copy; 2025 B & R Abyssinian Cattery. Hong Kong. CFA Registered.</p>
     </footer>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // 核心功能：讀取 JSON 資料並渲染網頁
+        async function loadSiteData() {
+            try {
+                // 讀取 data.json 檔案 (快取防止)
+                const response = await fetch('./data.json?v=' + Date.now());
+                const data = await response.json();
 
-        // GALLERY IMAGES DATA
-        const GALLERY_IMAGES = [
-            "https://cfa.org/wp-content/uploads/2025/09/2025-g-BRAbyPanettone.webp",
-            "https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&q=80&w=600",
-            "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&q=80&w=600",
-            "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&q=80&w=600",
-            "https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&q=80&w=600",
-            "https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&q=80&w=600",
-            "https://images.unsplash.com/photo-1511275539165-cc46b1ee8960?auto=format&fit=crop&q=80&w=600",
-            "https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?auto=format&fit=crop&q=80&w=600"
-        ];
+                // 1. 渲染 Kings & Queens
+                const catsGrid = document.getElementById('cats-grid');
+                if (data.cats && data.cats.length > 0) {
+                    catsGrid.innerHTML = data.cats.map(cat => `
+                        <div class="warm-card group p-3 reveal">
+                            <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-stone-100 relative mb-4">
+                                <img src="${cat.image}" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" alt="${cat.name}" onerror="this.src='https://via.placeholder.com/300x400?text=Cat+Photo'">
+                            </div>
+                            <div class="text-center font-serif text-xl text-stone-800">${cat.name}</div>
+                        </div>
+                    `).join('');
+                }
 
-        const container = document.getElementById('smart-gallery');
-        GALLERY_IMAGES.forEach(url => {
-            const div = document.createElement('div');
-            div.className = "warm-card group relative aspect-square overflow-hidden rounded-[2rem] reveal";
-            div.innerHTML = `<img src="${url}" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" loading="lazy">`;
-            container.appendChild(div);
-        });
+                // 2. 渲染 Gallery (Warm Memories)
+                const galleryGrid = document.getElementById('smart-gallery');
+                if (data.gallery && data.gallery.length > 0) {
+                    galleryGrid.innerHTML = data.gallery.map(item => `
+                        <div class="warm-card group relative aspect-square overflow-hidden rounded-[2rem] reveal">
+                            <img src="${item.url}" class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110" loading="lazy" onerror="this.src='https://via.placeholder.com/400?text=Memory'">
+                        </div>
+                    `).join('');
+                }
 
+                // 重新啟動動畫偵測
+                startObserver();
+
+            } catch (error) {
+                console.error("Error loading CMS data:", error);
+                document.getElementById('cats-grid').innerHTML = "<p class='text-red-400'>Failed to load cats. Please check data.json.</p>";
+            }
+        }
+
+        // 動畫偵測
+        function startObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { 
+                    if (entry.isIntersecting) { 
+                        entry.target.classList.add('active'); 
+                        observer.unobserve(entry.target); 
+                    } 
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // 初始化
+        window.onload = loadSiteData;
+
+        // 手機選單
         const mobileMenu = document.getElementById('mobile-menu');
         function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
         document.getElementById('mobile-menu-button').addEventListener('click', toggleMenu);
-
-        const form = document.getElementById('inquiryForm');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            form.classList.add('opacity-30', 'pointer-events-none');
-            document.getElementById('formSuccess').classList.remove('hidden');
-        });
     </script>
 </body>
 </html>
