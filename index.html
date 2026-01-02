@@ -39,7 +39,7 @@
             animation: breathe 8s ease-in-out infinite;
         }
 
-        /* Card Design */
+        /* Card Hover Depth */
         .warm-card { 
             transition: all 0.4s ease; 
             border-radius: 2rem;
@@ -65,7 +65,7 @@
 </head>
 <body class="antialiased selection:bg-orange-100 selection:text-orange-900">
 
-    <!-- Navigation -->
+    <!-- Premium Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-orange-100/50">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between h-24 items-center">
@@ -86,13 +86,13 @@
                 </div>
 
                 <button id="mobile-menu-button" class="lg:hidden text-stone-800 p-2">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" x2="20" y1="12" x2="20" y2="12"/><line x1="4" x2="20" y1="6" x2="20" y2="6"/><line x1="4" x2="20" y1="18" x2="20" y2="18"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" x2="20" y1="6" x2="20" y2="6"/><line x1="4" x2="20" y1="18" x2="20" y2="18"/></svg>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 z-[60] hidden bg-white flex flex-col items-center justify-center space-y-8 text-2xl font-serif">
         <button onclick="toggleMenu()" class="absolute top-8 right-8 text-stone-400"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
         <a href="#home" onclick="toggleMenu()">Home</a>
@@ -113,7 +113,7 @@
             <div class="max-w-3xl reveal active">
                 <div class="flex items-center space-x-4 mb-8">
                     <span class="h-[1px] w-12 bg-white/50"></span>
-                    <p class="text-white font-bold tracking-[0.4em] text-[10px] uppercase shadow-sm">Nurturing with Love • Hong Kong</p>
+                    <p class="text-white font-bold tracking-[0.4em] text-[10px] uppercase shadow-sm">A Home Filled with Love • Hong Kong</p>
                 </div>
                 <h1 class="text-6xl md:text-8xl font-serif text-white mb-8 leading-[1.1] tracking-tight drop-shadow-md">
                     Nurtured with <br><span class="italic font-light text-stone-100">Heart & Soul.</span>
@@ -168,15 +168,14 @@
                     <h2 class="text-4xl md:text-6xl font-serif mb-10 text-stone-800 leading-tight">A Journey of <span class="italic text-ruddy">Dedication.</span></h2>
                     <div class="space-y-8 text-stone-600 font-light text-lg text-justify leading-relaxed">
                         <p>We are a Hong Kong Abyssinian cattery registered under the Cat Fanciers' Association (CFA). Our fascination with this mystical breed was love at first sight. It all started with our neutered pet Abyssinian girl—<strong>Dristi</strong>.</p>
-                        <p>We simply could not stop exploring the different representations and top bloodlines of the breed. The more we studied and learned from professional catteries around the world, the more irresistible it became.</p>
-                        <p>Since then, it has become a lifelong journey of dedication to this ancient and mystical breed.</p>
+                        <p>The more we studied and learned from professional catteries around the world, the more irresistible it became. Since then, it has become a lifelong journey of dedication to this ancient and mystical breed.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Kings & Queens -->
+    <!-- Kings & Queens Grid -->
     <section id="our-cats" class="py-32 bg-cream/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
             <div class="mb-20 reveal">
@@ -213,7 +212,6 @@
                             <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>CFA Official Registration Papers</span></li>
                             <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Full Vaccination & Health Records</span></li>
                             <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Neutering Certificate by Licensed Vet</span></li>
-                            <li class="flex items-center space-x-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-ruddy"><polyline points="20 6 9 17 4 12"/></svg><span>Lifetime Breeder Support</span></li>
                         </ul>
                     </div>
                 </div>
@@ -233,7 +231,7 @@
         </div>
     </section>
 
-    <!-- Adoption Journey (Finding the Perfect Match) -->
+    <!-- Adoption Journey Section -->
     <section id="adoption-process" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="text-center mb-20 reveal">
@@ -273,7 +271,7 @@
         </div>
     </section>
 
-    <!-- Refined Footer -->
+    <!-- Footer -->
     <footer class="py-24 bg-white border-t border-orange-100 text-center">
         <p class="text-3xl font-serif font-bold text-stone-800 leading-none">B & R</p>
         <p class="text-[10px] uppercase tracking-[0.4em] text-ruddy font-bold mt-2">Abyssinian Cattery</p>
@@ -286,12 +284,7 @@
 
     <script>
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
         }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
