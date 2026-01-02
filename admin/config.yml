@@ -1,7 +1,7 @@
-# Decap CMS 專業配置檔案
+# Decap CMS 專業配置檔案 - 已修復縮排與語法錯誤
 backend:
   name: github
-  repo: your-username/your-repo-name # 請替換為您的 GitHub 使用者名/倉庫名
+  repo: your-username/br-aby-website # 請務必改為您的 GitHub 使用者名稱/倉庫名稱
   branch: main
 
 media_folder: "assets/uploads"
@@ -25,8 +25,10 @@ collections:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Photo", name: "image", widget: "image"}
 
-          - label: "Litter Announcement Text", name: "kitten_text", widget: "markdown"}
+          - {label: "Litter Announcement Text", name: "kitten_text", widget: "markdown"}
           
-          - label: "Life Gallery (Smart Gallery)", name: "gallery", widget: "list", fields: [
-              {label: "Image Source", name: "url", widget: "image"}
-            ]}
+          - label: "Life Gallery (Smart Gallery)"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Image Source", name: "url", widget: "image"}
