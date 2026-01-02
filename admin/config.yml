@@ -1,7 +1,7 @@
 # Decap CMS 專業配置檔案 - 語法完全修復版
 backend:
   name: github
-  repo: your-username/br-aby-website # 請確保這裡是您的 GitHub 用戶名/倉庫名
+  repo: banserso125/B-R-Aby-cattery-site # 請確保這裡是您的 GitHub 用戶名/倉庫名
   branch: main
 
 media_folder: "assets/uploads"
