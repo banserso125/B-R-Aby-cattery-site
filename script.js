@@ -6,27 +6,30 @@ setInterval(function () {
 	showTime();
 }, 1000);
 
+<script>
 fetch('/content.json')
   .then(res => res.json())
   .then(data => {
-    // Hero
-    document.getElementById('hero-title').textContent = data.hero_title;
-    document.getElementById('hero-subtitle').textContent = data.hero_subtitle;
-    document.getElementById('hero-image').src = data.hero_image;
+    if (data.hero_title) document.getElementById('hero-title').innerText = data.hero_title;
+    if (data.hero_subtitle) document.getElementById('hero-subtitle').innerText = data.hero_subtitle;
+    if (data.hero_image) document.getElementById('hero-image').src = data.hero_image;
+    if (data.kitten_text) document.getElementById('kitten-text').innerText = data.kitten_text;
 
-    // Cats
-    const catsContainer = document.getElementById('cats-container');
-    catsContainer.innerHTML = '';
-    data.cats.forEach(cat => {
-      const div = document.createElement('div');
-      div.className = 'cat-card';
-      div.innerHTML = `
-        <img src="${cat.image}" alt="${cat.name}">
-        <p>${cat.name}</p>
-      `;
-      catsContainer.appendChild(div);
-    });
-
-    // Kittens text
-    document.getElementById('kitten-text').textContent = data.kitten_text;
+    if (data.cats && Array.isArray(data.cats)) {
+      const wrap = document.getElementById('cats-container');
+      wrap.innerHTML = '';
+      data.cats.forEach(cat => {
+        const div = document.createElement('div');
+        div.className = 'warm-card group p-3';
+        div.innerHTML = `
+          <div class="aspect-[3/4] overflow-hidden rounded-[1.5rem]">
+            <img src="${cat.image}" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-center font-serif text-xl mt-2">${cat.name}</div>
+        `;
+        wrap.appendChild(div);
+      });
+    }
   });
+</script>
+
