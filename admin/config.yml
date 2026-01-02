@@ -1,28 +1,36 @@
+# Decap CMS 專業配置檔案
 backend:
   name: github
-  repo: banser0125/B-R-Aby-cattery-site
+  repo: your-username/br-aby-website # 務必將 your-username 改為您的 GitHub 用戶名
   branch: main
 
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "site"
-    label: "Website Content"
+  - name: "content"
+    label: "網站內容管理"
     files:
-      - file: "content.json"
-        label: "Homepage"
-        name: "homepage"
+      - file: "index.html"
+        label: "首頁資訊"
+        name: "index"
         fields:
-          - label: "Kings & Queens"
+          - {label: "主標題", name: "hero_title", widget: "string", default: "Nurtured with Heart & Soul."}
+          - {label: "首頁主圖", name: "hero_image", widget: "image"}
+          
+          - label: "國王與皇后名單"
             name: "cats"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - {label: "名字", name: "name", widget: "string"}
+              - {label: "照片", name: "image", widget: "image"}
 
-          - label: "Gallery"
+          - label: "幼貓預訂文字"
+            name: "kitten_text"
+            widget: "markdown"
+
+          - label: "IG 藝廊圖片"
             name: "gallery"
             widget: "list"
-            field:
-              { label: "Image", name: "image", widget: "image" }
+            fields:
+              - {label: "圖片連結", name: "url", widget: "image"}
