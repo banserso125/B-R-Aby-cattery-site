@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main # Verify your GitHub branch name
+
+media_folder: "assets/uploads" # Folder where uploaded images will go
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - file: "index.html"
+        label: "Main Landing Page"
+        name: "index"
+        fields:
+          - label: "Hero Title"
+            name: "hero_title"
+            widget: "string"
+            default: "Nurtured with Heart & Soul."
+          
+          - label: "Hero Image"
+            name: "hero_image"
+            widget: "image"
+            default: "https://ik.imagekit.io/i7ldkzk4a/hero%20image"
+
+          - label: "Our Kings & Queens"
+            name: "cats"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Photo", name: "image", widget: "image"}
+
+          - label: "Smart Gallery"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Image URL", name: "url", widget: "image"}
+
+          - label: "Available Kittens Text"
+            name: "kitten_text"
+            widget: "markdown"
