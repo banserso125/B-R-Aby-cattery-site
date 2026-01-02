@@ -1,23 +1,34 @@
 {
   "hero_title": "Nurtured with Heart & Soul.",
-  "hero_subtitle": "A home raised with love, ethics and passion.",
-  "hero_image": "/assets/uploads/hero.jpg",
+  "hero_subtitle": "A home where love, ethics and beauty grow together.",
+  "hero_image": "https://ik.imagekit.io/i7ldkzk4a/hero%20image",
 
   "cats": [
     {
       "name": "Archie",
-      "image": "/assets/uploads/archie.jpg"
+      "image": "https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pb7tncpb7tncpb7t.png"
     },
     {
-      "name": "Luna",
-      "image": "/assets/uploads/luna.jpg"
+      "name": "Theo",
+      "image": "https://ik.imagekit.io/i7ldkzk4a/313337570_520024506321078_4612126473075696293_n.jpg"
+    },
+    {
+      "name": "Betty",
+      "image": "https://ik.imagekit.io/i7ldkzk4a/IMG_2105.jpg"
+    },
+    {
+      "name": "Suzy",
+      "image": "https://ik.imagekit.io/i7ldkzk4a/IMG_9839_edited.jpg"
+    },
+    {
+      "name": "Mia",
+      "image": "https://ik.imagekit.io/i7ldkzk4a/Gemini_Generated_Image_pc6ixlpc6ixlpc6i.png"
+    },
+    {
+      "name": "GeiGei",
+      "image": "https://ik.imagekit.io/i7ldkzk4a/18246319168038891.jpg"
     }
   ],
 
-  "gallery": [
-    { "image": "/assets/uploads/gallery1.jpg" },
-    { "image": "/assets/uploads/gallery2.jpg" }
-  ],
-
-  "kitten_text": "All our kittens are raised with love, socialised daily, and matched carefully with their forever families."
+  "kitten_text": "Our kittens are raised with love, socialisation, and ethical breeding practices. Each kitten receives full veterinary care and lifelong support."
 }
