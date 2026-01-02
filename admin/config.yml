@@ -4,6 +4,7 @@ backend:
   repo: banserso125/B-R-Aby-cattery-site # 請確保這裡是您的 GitHub 用戶名/倉庫名
   branch: main
 
+# 修正圖片儲存與讀取路徑
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
@@ -15,10 +16,7 @@ collections:
         label: "Home Page Content"
         name: "index"
         fields:
-          # 只保留文字修改，移除 Hero 圖片修改以防誤觸
-          - label: "Hero Headline"
-            name: "hero_title"
-            widget: "string"
+          # 移除了 Hero 和 Adoption 區塊，只保留貓咪名單與藝廊
 
           # 管理國王與皇后 (Kings & Queens)
           - label: "Kings & Queens List"
@@ -28,19 +26,6 @@ collections:
             fields:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Photo", name: "image", widget: "image"}
-
-          # 管理領養流程文字
-          - label: "Adoption Section"
-            name: "adoption"
-            widget: "object"
-            fields:
-              - {label: "Heading", name: "heading", widget: "string"}
-              - label: "Steps"
-                name: "steps"
-                widget: "list"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", widget: "text"}
 
           # 管理生活藝廊 (Warm Memories)
           - label: "Life Gallery (Warm Memories)"
