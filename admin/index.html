@@ -6,11 +6,11 @@
   <title>B & R Aby Content Manager</title>
 </head>
 <body>
+  <!-- 
+    此檔案不包含任何 Identity Widget 腳本。
+    Decap CMS 會根據 config.yml 中的 backend.name: github 自動處理授權。
+  -->
   <script>
-    /**
-     * 強制手動構造配置文件的絕對路徑。
-     * 解決 Decap CMS 在 Netlify/GitHub 環境下可能出現的路徑解析錯誤。
-     */
     try {
       const configFileName = 'config.yml';
       window.CMS_CONFIG_URL = new URL(configFileName, window.location.href).href;
@@ -18,7 +18,6 @@
       console.error("Failed to construct CMS config URL:", e);
     }
   </script>
-
   <!-- 載入最新穩定版 Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
