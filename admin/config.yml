@@ -15,57 +15,36 @@ collections:
         label: "Home Page Content"
         name: "index"
         fields:
-          # --- Hero Section ---
+          # 只保留文字修改，移除 Hero 圖片修改以防誤觸
           - label: "Hero Headline"
             name: "hero_title"
             widget: "string"
-            default: "Nurtured with Heart & Soul."
-          - label: "Hero Background Image"
-            name: "hero_image"
-            widget: "image"
-          
-          # --- Kings & Queens ---
+
+          # 管理國王與皇后 (Kings & Queens)
           - label: "Kings & Queens List"
             name: "cats"
             widget: "list"
+            summary: "{{fields.name}}"
             fields:
-              - label: "Name"
-                name: "name"
-                widget: "string"
-              - label: "Photo"
-                name: "image"
-                widget: "image"
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Photo", name: "image", widget: "image"}
 
-          # --- Available Kittens ---
-          - label: "Kitten Announcement Text"
-            name: "kitten_text"
-            widget: "markdown"
-          
-          # --- Adoption Journey ---
-          - label: "Adoption Journey Section"
+          # 管理領養流程文字
+          - label: "Adoption Section"
             name: "adoption"
             widget: "object"
             fields:
-              - label: "Section Heading"
-                name: "heading"
-                widget: "string"
-                default: "Adoption Journey"
+              - {label: "Heading", name: "heading", widget: "string"}
               - label: "Steps"
                 name: "steps"
                 widget: "list"
                 fields:
-                  - label: "Step Title"
-                    name: "title"
-                    widget: "string"
-                  - label: "Description"
-                    name: "description"
-                    widget: "text"
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
 
-          # --- Life Gallery ---
-          - label: "Life Gallery (Smart Gallery)"
+          # 管理生活藝廊 (Warm Memories)
+          - label: "Life Gallery (Warm Memories)"
             name: "gallery"
             widget: "list"
             fields:
-              - label: "Image Source"
-                name: "url"
-                widget: "image"
+              - {label: "URL", name: "url", widget: "image"}
