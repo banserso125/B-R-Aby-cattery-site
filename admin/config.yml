@@ -1,7 +1,7 @@
-# Decap CMS 專業配置檔案 - 使用 GitHub 直接授權
+# Decap CMS 專業配置檔案 - 語法完全修復版
 backend:
   name: github
-  repo: your-username/br-aby-website # 務必將 your-username 改為您的 GitHub 使用者名稱
+  repo: your-username/br-aby-website # 請確保這裡是您的 GitHub 用戶名/倉庫名
   branch: main
 
 media_folder: "assets/uploads"
@@ -16,36 +16,56 @@ collections:
         name: "index"
         fields:
           # --- Hero Section ---
-          - {label: "Hero Headline", name: "hero_title", widget: "string", default: "Nurtured with Heart & Soul."}
-          - {label: "Hero Background Image", name: "hero_image", widget: "image"}
+          - label: "Hero Headline"
+            name: "hero_title"
+            widget: "string"
+            default: "Nurtured with Heart & Soul."
+          - label: "Hero Background Image"
+            name: "hero_image"
+            widget: "image"
           
           # --- Kings & Queens ---
           - label: "Kings & Queens List"
             name: "cats"
             widget: "list"
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Photo", name: "image", widget: "image"}
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "Photo"
+                name: "image"
+                widget: "image"
 
           # --- Available Kittens ---
-          - {label: "Kitten Announcement Text", name: "kitten_text", widget: "markdown"}
+          - label: "Kitten Announcement Text"
+            name: "kitten_text"
+            widget: "markdown"
           
           # --- Adoption Journey ---
           - label: "Adoption Journey Section"
             name: "adoption"
             widget: "object"
             fields:
-              - {label: "Section Heading", name: "heading", widget: "string", default: "Adoption Journey"}
-              - {label: "Steps"
+              - label: "Section Heading"
+                name: "heading"
+                widget: "string"
+                default: "Adoption Journey"
+              - label: "Steps"
                 name: "steps"
                 widget: "list"
                 fields:
-                  - {label: "Step Title", name: "title", widget: "string"}
-                  - {label: "Description", name: "description", widget: "text"}
+                  - label: "Step Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Description"
+                    name: "description"
+                    widget: "text"
 
           # --- Life Gallery ---
           - label: "Life Gallery (Smart Gallery)"
             name: "gallery"
             widget: "list"
             fields:
-              - {label: "Image Source", name: "url", widget: "image"}
+              - label: "Image Source"
+                name: "url"
+                widget: "image"
