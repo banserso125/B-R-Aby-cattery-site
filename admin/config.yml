@@ -4,21 +4,18 @@ backend:
   repo: banserso125/B-R-Aby-cattery-site # 請確保這裡是您的 GitHub 用戶名/倉庫名
   branch: main
 
-# 修正圖片儲存與讀取路徑
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
   - name: "content"
-    label: "Website Management"
+    label: "Website Content"
     files:
-      - file: "index.html"
-        label: "Home Page Content"
-        name: "index"
+      - file: "data.json" # 改為修改 data.json，這是最穩定的做法
+        label: "Dynamic Content"
+        name: "data"
         fields:
-          # 移除了 Hero 和 Adoption 區塊，只保留貓咪名單與藝廊
-
-          # 管理國王與皇后 (Kings & Queens)
+          # 只保留你需要修改的 Kings & Queens 以及 Warm Memories
           - label: "Kings & Queens List"
             name: "cats"
             widget: "list"
@@ -27,9 +24,8 @@ collections:
               - {label: "Name", name: "name", widget: "string"}
               - {label: "Photo", name: "image", widget: "image"}
 
-          # 管理生活藝廊 (Warm Memories)
           - label: "Life Gallery (Warm Memories)"
             name: "gallery"
             widget: "list"
             fields:
-              - {label: "URL", name: "url", widget: "image"}
+              - {label: "Image URL", name: "url", widget: "image"}
