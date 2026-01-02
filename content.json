@@ -1,0 +1,23 @@
+{
+  "hero_title": "Nurtured with Heart & Soul.",
+  "hero_subtitle": "A home raised with love, ethics and passion.",
+  "hero_image": "/assets/uploads/hero.jpg",
+
+  "cats": [
+    {
+      "name": "Archie",
+      "image": "/assets/uploads/archie.jpg"
+    },
+    {
+      "name": "Luna",
+      "image": "/assets/uploads/luna.jpg"
+    }
+  ],
+
+  "gallery": [
+    { "image": "/assets/uploads/gallery1.jpg" },
+    { "image": "/assets/uploads/gallery2.jpg" }
+  ],
+
+  "kitten_text": "All our kittens are raised with love, socialised daily, and matched carefully with their forever families."
+}
