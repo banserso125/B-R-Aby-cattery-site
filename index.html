@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>B & R Abyssinian Cattery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,18 +15,18 @@
 <section class="min-h-screen flex items-center justify-center text-center px-6">
   <div>
     <h1 id="hero-title" class="text-6xl md:text-8xl font-serif mb-6"></h1>
-    <p id="hero-subtitle" class="text-xl max-w-xl mx-auto"></p>
-    <img id="hero-image" class="mx-auto mt-10 max-w-md rounded-xl shadow-lg" />
+    <p id="hero-subtitle" class="text-xl max-w-xl mx-auto mb-8"></p>
+    <img id="hero-image" class="mx-auto max-w-xl rounded-xl shadow-lg" />
   </div>
 </section>
 
 <!-- KINGS & QUEENS -->
 <section class="py-24 bg-[#f7f3ef]">
-  <h2 class="text-center text-4xl font-serif mb-12">Our Kings & Queens</h2>
+  <h2 class="text-4xl font-serif text-center mb-12">Our Kings & Queens</h2>
   <div id="cats-container" class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto"></div>
 </section>
 
-<!-- KITTENS -->
+<!-- AVAILABLE KITTENS -->
 <section class="py-24 bg-white text-center">
   <h2 class="text-4xl font-serif mb-6">Available Kittens</h2>
   <p id="kitten-text" class="max-w-3xl mx-auto text-lg"></p>
@@ -36,23 +36,21 @@
 fetch('/content.json')
   .then(res => res.json())
   .then(data => {
-
     document.getElementById('hero-title').textContent = data.hero_title;
     document.getElementById('hero-subtitle').textContent = data.hero_subtitle;
     document.getElementById('hero-image').src = data.hero_image;
-
     document.getElementById('kitten-text').textContent = data.kitten_text;
 
-    const cats = document.getElementById('cats-container');
-    cats.innerHTML = '';
+    const wrap = document.getElementById('cats-container');
+    wrap.innerHTML = '';
     data.cats.forEach(cat => {
       const div = document.createElement('div');
-      div.className = "bg-white rounded-xl shadow p-4 text-center";
+      div.className = 'bg-white rounded-xl shadow p-4';
       div.innerHTML = `
         <img src="${cat.image}" class="w-full h-64 object-cover rounded-lg mb-3" />
-        <h3 class="text-lg font-semibold">${cat.name}</h3>
+        <h3 class="text-lg font-semibold text-center">${cat.name}</h3>
       `;
-      cats.appendChild(div);
+      wrap.appendChild(div);
     });
   });
 </script>
