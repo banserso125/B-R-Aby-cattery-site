@@ -8,7 +8,8 @@
 <body>
   <script>
     /**
-     * 手動構造配置文件的絕對路徑，以解決不同部署環境下的 URL 解析錯誤。
+     * 手動構造配置文件的絕對 URL。
+     * 這能解決 Decap CMS 在某些環境下無法正確找到 config.yml 的報錯。
      */
     try {
       const configFileName = 'config.yml';
@@ -17,8 +18,7 @@
       console.error("無法正確解析配置文件路徑:", e);
     }
   </script>
-
-  <!-- 載入 Decap CMS 主程式 -->
+  <!-- 載入最新版 Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
